@@ -1,0 +1,12 @@
+plugin.tx_cssce {
+	settings {
+		# cat=plugin.tx_cssce/dims/010; type=int+; label=Minimal width of small devices (Pixel)
+		widthS = 768
+		
+		# cat=plugin.tx_cssce/dims/011; type=int+; label=Minimal width of medium devices (Pixel)
+		widthM = 992
+		
+		# cat=plugin.tx_cssce/dims/012; type=int+; label=Minimal width of large devices (Pixel)
+		widthL = 1200
+	}
+}

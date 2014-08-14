@@ -1,0 +1,8 @@
+#
+# Hide TYPO3 margin fields
+#
+
+TCEFORM.tt_content {
+	spaceBefore.disabled = 1
+	spaceAfter.disabled = 1
+}

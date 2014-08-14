@@ -1,0 +1,502 @@
+plugin.tx_cssce {
+	persistence {
+		classes {
+			ingoreuter\CssCe\Domain\Model\ContentElement {
+				mapping {
+					tableName = tt_content
+					columns {
+						tx_cssce_css.mapOnProperty = cssContent
+					}
+				}
+			}
+		}
+	}
+	settings {
+		widthS = {$plugin.tx_cssce.settings.widthS}
+		widthL = {$plugin.tx_cssce.settings.widthL}
+		widthM = {$plugin.tx_cssce.settings.widthM}
+	}
+}
+
+page.24112009 < tt_content.list.20.cssce_csscode
+
+
+
+
+# Content header:
+lib.stdheader > 
+lib.stdheader = COA
+lib.stdheader {
+
+	# Create class attribute for <Hx> tags
+	3 = LOAD_REGISTER
+	3 {
+		headerClass {
+			cObject = COA
+			cObject {
+				# Create alignment class for <Hx> tags
+				10 = TEXT
+				10 {
+					field = header_position
+					required = 1
+					noTrimWrap = |csc-header-alignment-| |
+				}
+				# Create header type info class for <Hx> tags
+				20 = TEXT
+				20 {
+					field = header_layout
+					required = 1
+					noTrimWrap = |csc-header-layout-| |
+				}
+				# Create "csc-firstHeader" class for <Hx> tags
+				30 = TEXT
+				30 {
+					value = csc-firstHeader
+					if {
+						value = 1
+						equals.data = cObj:parentRecordNumber
+					}
+					noTrimWrap = || |
+				}
+				40 = TEXT
+				40 {
+					value = csc-header-contentelement
+					noTrimWrap = || |
+				}
+				stdWrap {
+					trim = 1
+					noTrimWrap = | class="|"|
+					required = 1
+				}
+			}
+		}
+		subheaderClass {
+			cObject = COA
+			cObject {
+				# Create alignment class for <Hx> tags
+				10 = TEXT
+				10 {
+					field = header_position
+					required = 1
+					noTrimWrap = |csc-subheader-alignment-| |
+				}
+				# Create header type info class for <Hx> tags
+				20 = TEXT
+				20 {
+					field = header_layout
+					required = 1
+					noTrimWrap = |csc-subheader-layout-| |
+				}
+				# Create "csc-firstHeader" class for <Hx> tags
+				30 = TEXT
+				30 {
+					value = csc-firstSubheader
+					if {
+						value = 1
+						equals.data = cObj:parentRecordNumber
+					}
+					noTrimWrap = || |
+				}
+				40 = TEXT
+				40 {
+					value = csc-subheader-contentelement
+					noTrimWrap = || |
+				}
+				stdWrap {
+					trim = 1
+					noTrimWrap = | class="|"|
+					required = 1
+				}
+			}
+		}
+	}
+	
+	# Date format (not HTML5)
+	5 = TEXT
+	5 {
+		field = date
+		if {
+			isTrue {
+				field = date
+			}
+			isFalse = 1
+			isFalse {
+				if {
+					value = html5
+					equals.data = TSFE:config|config|doctype
+				}
+			}
+		}
+		strftime = %x
+		wrap = <p class="csc-header-date">|</p>
+		prefixComment = 2 | Header date:
+	}
+	
+	# HTML5 <hgroup> open
+	7 = TEXT
+	7 {
+		value = <hgroup>
+		fieldRequired = subheader
+		if {
+			value = html5
+			equals.data = TSFE:config|config|doctype
+		}
+	}
+	
+	# This CASE cObject renders the header content:
+	# currentValue is set to the header data, possibly wrapped in link-tags.
+	10 = CASE
+	10.setCurrent {
+		field = header
+		htmlSpecialChars = 1
+		typolink.parameter.field = header_link
+	}
+	10.key.field = header_layout
+	10.key.ifEmpty = {$content.defaultHeaderType}
+	10.key.ifEmpty.override.data = register: defaultHeaderType
+	
+	10.default = TEXT
+	10.default.current = 1
+	10.default.dataWrap = <h2{register:headerClass}>|</h2>
+	
+	
+	# HTML5 subheader
+	20 = CASE
+	20 {
+		key {
+			field = header_layout
+		}
+	
+		default = TEXT
+		default {
+			dataWrap = <h2{register:subheaderClass}>|</h2>
+			htmlSpecialChars = 1
+			field = subheader
+		}
+		
+		if {
+			isTrue {
+				field = subheader
+			}
+			value = html5
+			equals.data = TSFE:config|config|doctype
+			# Hide subheader for old style form element (it is used for recipient mail)
+			isFalse = 0
+			isFalse.override = 1
+			isFalse.override {
+				if.equals.field = CType
+				if.value = mailform
+			}
+		}
+	}
+	
+	# HTML5 <hgroup> close
+	30 < lib.stdheader.7
+	30 {
+		value = </hgroup>
+	}
+	
+	# HTML5 Date
+	40 = COA
+	40 {
+	
+		stdWrap {
+			wrap = <p class="csc-header-date">|</p>
+			innerWrap {
+				cObject = COA
+				cObject {
+					10 = TEXT
+					10 {
+						value = <time
+					}
+					20 = TEXT
+					20 {
+						noTrimWrap = | datetime="|"|
+						field = date
+						strftime = %Y-%m-%d
+					}
+					30 = TEXT
+					30 {
+						value = >|</time>
+					}
+				}
+			}
+			required = 1
+		}
+		10 = TEXT
+		10 {
+			field = date
+			strftime = %B %e, %Y
+		}
+		if {
+			isTrue {
+				field = date
+			}
+				value = html5
+				equals.data = TSFE:config|config|doctype
+			}
+		}
+	
+		# Pops the used registers off the stack:
+		98 = RESTORE_REGISTER
+	
+		# Post-processing:
+		stdWrap.fieldRequired = header
+		stdWrap.if {
+			equals.field = header_layout
+			value = 100
+			negate = 1
+		}
+	
+		stdWrap.editIcons = tt_content : header, [header_layout | header_position], [header_link|date]
+		stdWrap.editIcons.beforeLastTag = 1
+		stdWrap.editIcons.iconTitle.data = LLL:EXT:css_styled_content/pi1/locallang.xml:eIcon.header
+	
+		stdWrap {
+			dataWrap = <div class="csc-header csc-header-n{cObj:parentRecordNumber}">|</div>
+			dataWrap {
+				override = <header class="csc-header csc-header-n{cObj:parentRecordNumber}">|</header>
+				override {
+				if {
+					value = html5
+					equals.data = TSFE:config|config|doctype
+				}
+			}
+		}
+	}
+	stdWrap.prefixComment = 2 | Header:
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#******************************************************
+# Including library for processing of some elements:
+#******************************************************
+includeLibs.tx_cssstyledcontent_pi1 = EXT:css_styled_content/pi1/class.tx_cssstyledcontent_pi1.php
+
+
+#**********************************
+# tt_content is started
+#**********************************
+tt_content = CASE
+tt_content.key.field = CType
+tt_content.stdWrap > 
+tt_content.stdWrap {
+	innerWrap.cObject = CASE
+	innerWrap.cObject {
+		key.field = section_frame
+
+		default = COA
+		default {
+			10 = TEXT
+			10 {
+				cObject = CASE
+				cObject {
+					key.field = CType
+					
+					default = TEXT
+					default {
+						value = <div id="c{field:uid}"
+					}
+		
+					div = TEXT
+					div {
+						value = <div
+					}
+			
+					menu < .default
+					menu {
+						override = <nav id="c{field:uid}"
+						override {
+							if {
+								value = html5
+								equals.data = TSFE:config|config|doctype
+							}
+						}
+					}
+				}
+				insertData = 1
+			}
+		
+			20 = COA
+			20 {
+				# Create default class for content
+				10 = TEXT
+				10 {
+					value = csc-contentelement
+					required = 1
+					noTrimWrap = || |
+				}
+				# Create class for space before content
+				20 = USER
+				20 {
+					userFunc = tx_cssstyledcontent_pi1->renderSpace
+					space = before
+					constant = {$content.spaceBefore}
+					classStdWrap {
+						noTrimWrap = |csc-space-before-| |
+					}
+				}
+				# Create class for space after content
+				30 = USER
+				30 {
+					userFunc = tx_cssstyledcontent_pi1->renderSpace
+					space = after
+					constant = {$content.spaceAfter}
+					classStdWrap {
+						noTrimWrap = |csc-space-after-| |
+					}
+				}
+				40 = TEXT
+				40 {
+					field = layout
+					required = 1
+					noTrimWrap = |csc-contentelement-layout-| |
+				}
+				50 = TEXT
+				50 {
+					field = section_frame
+					required = 1
+					noTrimWrap = |csc-contentelement-frame-| |
+				}
+				stdWrap {
+					trim = 1
+					noTrimWrap = | class="|"|
+					required = 1
+				}
+			}
+			
+			30 = TEXT
+			30 {
+				cObject = CASE
+				cObject {
+					key.field = CType
+					
+					default = TEXT
+					default {
+						value = >|</div>
+					}
+			
+					menu < .default
+					menu {
+						override = >|</nav>
+						override {
+							if {
+								value = html5
+								equals.data = TSFE:config|config|doctype
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		66 = COA
+		66 {
+			10 = TEXT
+			10 {
+				value = <a id="c{field:uid}"></a>
+				insertData = 1
+			}
+			# Create div with class for space before content
+			20 = COA
+			20 {
+				10 = USER
+				10 {
+					userFunc = tx_cssstyledcontent_pi1->renderSpace
+					space = before
+					constant = {$content.spaceBefore}
+					classStdWrap {
+						wrap = csc-space-before-|
+					}
+				}
+				stdWrap {
+					wrap = <div class="|"></div>
+					required = 1
+				}
+			}
+			
+			30 = TEXT
+			30 {
+				value = |
+			}
+			
+			# Create div with class for space after content
+			40 < .20
+			40 {
+				10 {
+					space = after
+					constant = {$content.spaceAfter}
+					classStdWrap {
+						wrap = csc-space-after-|
+					}
+				}
+			}
+		}
+	}
+	
+	innerWrap2 = | <p class="csc-linkToTop"><a href="#">{LLL:EXT:css_styled_content/pi1/locallang.xml:label.toTop}</a></p>
+	innerWrap2.insertData = 1
+	innerWrap2.fieldRequired = linkToTop
+	
+	prepend = TEXT
+	prepend.dataWrap = <a id="c{field:_LOCALIZED_UID}"></a>
+	prepend.if.isTrue.field = _LOCALIZED_UID
+	
+	editPanel = 1
+	editPanel {
+		allow = move,new,edit,hide,delete
+		line = 5
+		label = %s
+		onlyCurrentPid = 1
+		previewBorder = 4
+		edit.displayRecord = 1
+	}
+	
+	prefixComment = 1 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
+}
+	
+	
+	
+# *****************
+# CType: header
+# *****************
+# See Object path "lib.stdheader"
+tt_content.header = COA
+tt_content.header {
+	10 = < lib.stdheader
+
+	120 = TEXT
+	120 {
+		field = subheader
+		required = 1
+		
+		dataWrap = <p class="csc-subheader csc-subheader-{field:layout}">|</p>
+		htmlSpecialChars = 1
+		
+		if {
+			value = html5
+			equals.data = TSFE:config|config|doctype
+			negate = 1
+		}
+		
+		editIcons = tt_content:subheader,layout
+		editIcons.beforeLastTag = 1
+		editIcons.iconTitle.data = LLL:EXT:css_styled_content/pi1/locallang.xml:eIcon.subheader
+		
+		prefixComment = 2 | Subheader:
+	}
+}
+

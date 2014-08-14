@@ -1,0 +1,22 @@
+{namespace cc=ingoreuter\CssCe\ViewHelpers}
+<cc:insertCss>
+	<f:for each="{cssCode}" key="cID" as="codelines" >
+		<f:if condition="{cc:arrayItem(array: '{checkStr}', item: '{cID}')}">
+			#c{cID} {
+				<f:for each="{codelines}" as="line"><f:if condition="{line.value}">{line.prop}: {line.value};</f:if></f:for>
+				<cc:arrayItem array="{moreCss}" item="{cID}" />
+			}
+		</f:if>
+	</f:for>
+	<f:for each="{rwd}" key="cID" as="query" ><f:if condition="{query}">
+			{query} { 
+				#c{cID} {display: none}
+			}
+	</f:if></f:for>
+	<f:for each="{print}" key="cID" as="rule" ><f:if condition="{rule}">
+			@media print { 
+				#c{cID} {display: none}
+			}
+	</f:if></f:for>
+	<f:for each="{freeCss}" as="freeItem" >{freeItem}</f:for>
+</cc:insertCss>

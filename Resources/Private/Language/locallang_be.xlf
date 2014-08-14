@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-10-25T14:11:05Z" product-name="css_ce">
+		<header/>
+		<body>
+			
+			<trans-unit id="tx_cssce.plugin.name">
+				<source>Render content element CSS code (do NOT include as content element)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.be.tabname">
+				<source>Content element style</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.tab.backgroundimage">
+				<source>Background image</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundimage">
+				<source>Background image</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundrepeat">
+				<source>Background repeat</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundrepeat.items.noRepeat">
+				<source>Do not repeat background image</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundrepeat.items.repeatX">
+				<source>Repeat horizontal</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundrepeat.items.repeatY">
+				<source>Repeat vertical</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundrepeat.items.repeatXY">
+				<source>Repeat horizontal and vertical</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundattachment">
+				<source>Background attachment (behavior on scrolling)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundattachment.items.scroll">
+				<source>Scroll along with the element</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundattachment.items.fixed">
+				<source>Fixed with regard to the viewport</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundattachment.items.local">
+				<source>Scroll along with the element's contents</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundorigin">
+				<source>Area where the background is shown</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundorigin.items.padding">
+				<source>Show on padding-box</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundorigin.items.border">
+				<source>Show on border-box</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundorigin.items.content">
+				<source>Show on content-box</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundposition">
+				<source>Background position \n\n (You can set the x and y position to "center", "top", "left", "right" and "bottom". Alternatively you can set values to percent (%) and pixel (px). The top left corner is (0|0). If only one value is provided, the other one will be taken as center / 50%.) </source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundsize">
+				<source>Background size \n\n You can use two numeric values (units: px, %, ...)  (e.g. "20px 40px") to set the width and height (secound value). If only one values is provided, the hight is set to "auto" to keep the image's aspect ratio. Alternatively you can use "auto" (devault value, if empty) to keep the image's original size. "cover" scales the backgroundimage to cover the full page. "contain" scales the background to it's largest possible size that the full image is visible. "inherit" applies the value the parent element. </source>
+			</trans-unit>
+			
+			
+			
+			<trans-unit id="tx_cssce.flex.tab.backgroundcolor">
+				<source>Background color</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundcolor">
+				<source>Background color \n\n You can use a HTML-value (like "#3399DD"), an RGB(A)-Valure (use: "rgb(10,0,90)" or "rgba(255, 0, 0, 0.25)) or an CSS-Keyword (like "red").</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundclip">
+				<source>Area where the background color is shown</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundclip.items.padding">
+				<source>Show on padding-box</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundclip.items.border">
+				<source>Show on border-box</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.backgroundclip.items.content">
+				<source>Show on content-box</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_cssce.flex.tab.margin">
+				<source>Margin settings (outer space)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.tab.padding">
+				<source>Padding settings (inner space)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.spaceings.top">
+				<source>Top</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.spaceings.bottom">
+				<source>Bottom</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.spaceings.left">
+				<source>Left</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.spaceings.right">
+				<source>Right</source>
+			</trans-unit>
+			
+			
+			
+			<trans-unit id="tx_cssce.flex.tab.other">
+				<source>Advanced CSS configuration</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.contentelementCss">
+				<source>Advanced element configuration \n\n Set more CSS properties to the element. Just write standart CSS code. Do NOT write "#c(ID){" and the closing "}". This is done for you ;)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.pageCss">
+				<source>Advanced page configuration \n\n Set more CSS properties to a feely choosen element. Just write standart CSS code. Do not forget to adress the element by using selectors (like "#myElement {  font-size: 2em; }")</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_cssce.flex.tab.rwd">
+				<source>Responsive web design (RWD)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.mode">
+				<source>Display mode</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.mode.none">
+				<source>Display content element on all screen sizes</source>
+			</trans-unit>
+			<trans-unit id="tx_cssce.flex.rwd.mode.div">
+				<source>Responsive web design</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.mode.hide">
+				<source>Hide content element on some screen sizes</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.screensize">
+				<source>Select sreen sizes to HIDE the content element</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.screensize.xs">
+				<source>Extra small</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.screensize.s">
+				<source>Small</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.screensize.m">
+				<source>Medium</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.screensize.l">
+				<source>Large</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_cssce.flex.rwd.print">
+				<source>Hide on print</source>
+			</trans-unit>
+			
+			
+			
+			<trans-unit id="tx_cssce.flex.stdItems.notSet">
+				<source>[Not set / use default]</source>
+			</trans-unit>
+			<trans-unit id="tx_cssce.flex.stdItems.cssValues">
+				<source>CSS values</source>
+			</trans-unit>
+			<trans-unit id="tx_cssce.flex.stdItems.div.dynamic">
+				<source>Dynamic values</source>
+			</trans-unit>
+			<trans-unit id="tx_cssce.flex.stdItems.inherit">
+				<source>Inherit property from its parent element</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

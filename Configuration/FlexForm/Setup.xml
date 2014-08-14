@@ -1,0 +1,478 @@
+<T3DataStructure>
+	<meta>
+       <langDisable>1</langDisable>
+  </meta>
+	<sheets>
+		<tab.bgImage>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.tab.backgroundimage</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<contentelement.background-image>
+						<TCEforms>
+							<label>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundimage</label>
+							<config>
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>jpg,jpeg,gif,png</allowed>
+								<uploadfolder>uploads/tx_cssce/backgroundimages</uploadfolder>
+								<show_thumbs>true</show_thumbs>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<multiple>false</multiple>
+							</config>
+						</TCEforms>
+					</contentelement.background-image>
+					
+					<contentelement.background-repeat>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundrepeat
+							</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.notSet</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.cssValues</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundrepeat.items.noRepeat</numIndex>
+										<numIndex index="1">no-repeat</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundrepeat.items.repeatX</numIndex>
+										<numIndex index="1">repeat-x</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundrepeat.items.repeatY</numIndex>
+										<numIndex index="1">repeat-y</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundrepeat.items.repeatXY</numIndex>
+										<numIndex index="1">repeat</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.div.dynamic</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.inherit</numIndex>
+										<numIndex index="1">inherit</numIndex>
+									</numIndex>
+								</items>									
+							</config>
+						</TCEforms>
+					</contentelement.background-repeat>
+					
+					<contentelement.background-attachment>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundattachment
+							</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.notSet</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.cssValues</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundattachment.items.scroll</numIndex>
+										<numIndex index="1">scroll</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundattachment.items.fixed</numIndex>
+										<numIndex index="1">fixed</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundattachment.items.local</numIndex>
+										<numIndex index="1">local</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.div.dynamic</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.inherit</numIndex>
+										<numIndex index="1">inherit</numIndex>
+									</numIndex>
+								</items>									
+							</config>
+						</TCEforms>
+					</contentelement.background-attachment>
+					
+					<contentelement.background-origin>
+						<TCEforms>
+							<label>
+									LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundorigin
+							</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.notSet</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.cssValues</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundorigin.items.padding</numIndex>
+										<numIndex index="1">padding-box</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundorigin.items.border</numIndex>
+										<numIndex index="1">border-box</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundorigin.items.content</numIndex>
+										<numIndex index="1">content-box</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.div.dynamic</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.inherit</numIndex>
+										<numIndex index="1">inherit</numIndex>
+									</numIndex>
+								</items>									
+							</config>
+						</TCEforms>
+					</contentelement.background-origin>
+					
+					<contentelement.background-position>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundposition
+							</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</contentelement.background-position>
+					
+					<contentelement.background-size>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundsize
+							</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</contentelement.background-size>
+					
+				</el>
+			</ROOT>
+		</tab.bgImage>
+		<tab.bgColor>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.tab.backgroundcolor</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<contentelement.background-color>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundcolor
+							</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</contentelement.background-color>
+					
+					<contentelement.background-clip>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundclip
+							</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.notSet</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.cssValues</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundclip.items.padding</numIndex>
+										<numIndex index="1">padding-box</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundclip.items.border</numIndex>
+										<numIndex index="1">border-box</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.backgroundclip.items.content</numIndex>
+										<numIndex index="1">content-box</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.div.dynamic</numIndex>
+										<numIndex index="1">--div--</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.stdItems.inherit</numIndex>
+										<numIndex index="1">inherit</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</contentelement.background-clip>
+					
+				</el>
+			</ROOT>
+		</tab.bgColor>
+		
+		<tab.margin>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.tab.margin</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<contentelement.margin-top>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.top
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.margin-top>
+					
+					<contentelement.margin-bottom>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.bottom
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.margin-bottom>
+					
+					<contentelement.margin-left>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.left
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.margin-left>
+					
+					<contentelement.margin-right>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.right
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.margin-right>
+					
+				</el>
+			</ROOT>
+		</tab.margin>
+		
+		<tab.padding>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.tab.padding</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<contentelement.padding-top>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.top
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.padding-top>
+					
+					<contentelement.padding-bottom>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.bottom
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.padding-bottom>
+					
+					<contentelement.padding-left>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.left
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.padding-left>
+					
+					<contentelement.padding-right>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.spaceings.right
+							</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</contentelement.padding-right>
+					
+				</el>
+			</ROOT>
+		</tab.padding>
+		
+		<tab.other>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.tab.other</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<other.ce>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.contentelementCss
+							</label>
+							<config>
+								<type>text</type>
+							</config>
+						</TCEforms>
+					</other.ce>
+					
+					<other.page>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.pageCss
+							</label>
+							<config>
+								<type>text</type>
+							</config>
+						</TCEforms>
+					</other.page>
+				
+				</el>
+			</ROOT>
+		</tab.other>
+		
+		<tab.rwd>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.tab.rwd</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<rwd.mode>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.mode
+							</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.mode.none</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.mode.hide</numIndex>
+										<numIndex index="1">hide</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</rwd.mode>
+					
+					<rwd.screensize>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.screensize
+							</label>
+							<config>
+								<type>select</type>
+								<size>4</size>
+								<maxitems>4</maxitems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.screensize.xs</numIndex>
+										<numIndex index="1">xs</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.screensize.s</numIndex>
+										<numIndex index="1">s</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.screensize.m</numIndex>
+										<numIndex index="1">m</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.screensize.l</numIndex>
+										<numIndex index="1">l</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</rwd.screensize>
+					
+					<rwd.print>
+						<TCEforms>
+							<label>
+								LLL:EXT:css_ce/Resources/Private/Language/locallang_be.xlf:tx_cssce.flex.rwd.print
+							</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</rwd.print>
+					
+				</el>
+			</ROOT>
+		</tab.rwd>
+	</sheets>
+</T3DataStructure>
