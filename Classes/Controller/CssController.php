@@ -76,6 +76,10 @@ class CssController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 			for($i = 0; list($prop, $value) = each($cssContentArray['contentelement']); $i++) {
 				$cssCode[$uid][$i]['prop'] = $prop;
 				$cssCode[$uid][$i]['value'] = $value;
+				if($cssCode[$uid][$i]['prop'] == "background-image") {
+					$cssCode[$uid][$i]['value'] = "url(uploads/tx_cssce/backgroundimages/" . $cssCode[$uid][$i]['value'] . ")";
+				}
+
 				$temp .= $value;
 			}
 			$temp .= $cssContentArray['other']['ce'];
