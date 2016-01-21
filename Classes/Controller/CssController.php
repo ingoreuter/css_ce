@@ -57,7 +57,7 @@ class CssController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	 */
 	public function listAction() {
 		
-		/** @var \TYPO3\CMS\Extbase\Service\FlexFormService */
+		/** @var $flexForm \TYPO3\CMS\Extbase\Service\FlexFormService */
 		$flexForm = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance("TYPO3\CMS\Extbase\Service\FlexFormService");
 		
 		$cssCode = array();
